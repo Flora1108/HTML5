@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			localStorage.setItem("fuse","-");
+			while (true){
+				var fuse = localStorage.getItem("fuse");
+				try{
+					localStorage.setItem("fuse",fuse+fuse);
+				}catch(e){
+					//TODO handle the exception
+					alert("Your browser blew up at"+fuse.length+" with exception: "+e);
+					break;
+				}
+			}
+			localStorage.removeItem("fuse");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
